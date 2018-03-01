@@ -1,0 +1,18 @@
+Node* Insert(Node *head,int data)
+{  Node *new_ptr= new Node;     //This is the new pointer that we are going to add at the tail of the list  
+   new_ptr->data = data;       
+   new_ptr->next = NULL;    
+   if(head==NULL){            //Condition if the list is empty which is the first test case in Hackerrank
+     head = new_ptr;  
+   }
+   else{  
+     Node *dummy = new Node;   //a dummy pointer is used to travel to the end of the list, we can't use head because we are returning head
+     dummy = head;  
+     while(dummy->next !=NULL){  
+       dummy = dummy->next;  
+     }  
+     dummy->next = cur;  
+   }  
+     return head;  
+    
+}
