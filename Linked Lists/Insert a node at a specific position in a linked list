@@ -1,0 +1,23 @@
+
+Node* InsertNth(Node *head, int data, int position)
+{   
+    
+    Node* ne= new Node;
+    ne->data=data;
+    ne->next=NULL;
+    if(position==0){ne->next=head; head=ne;}      //if the new element is to be inserted at the front of the list
+    else
+    {
+        Node* dummy= new Node;                    //dummy pointer to travel to the required position of the list for the insertion
+        dummy=head;
+        while(--position)                         //loop to reach at the desired position in the list    
+        {                                         //we target the element before the position of insertion
+            dummy=dummy->next;                
+        }
+        ne->next=dummy->next;
+        dummy->next=ne;
+    
+     }
+    return head;
+
+}
