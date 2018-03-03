@@ -1,0 +1,22 @@
+void ReversePrint(Node *head)
+{
+    Node* current=head;
+    Node* prev=NULL;
+    Node* next;
+    while(current!=NULL)
+    {
+        next=current->next;
+        current->next=prev;
+        prev=current;
+        current=next;
+    }
+    head=prev;
+    
+    while(head!=NULL)
+  {
+        cout<<head->data<<endl;
+        head=head->next;
+  }
+  // This is a "method-only" submission. 
+  // You only need to complete this method. 
+}
