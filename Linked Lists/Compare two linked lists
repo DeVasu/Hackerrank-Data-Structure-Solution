@@ -1,0 +1,16 @@
+int CompareLists(Node *headA, Node* headB)
+{
+    int flag=1;
+    while(headA!=NULL || headB!=NULL)
+    {   
+        if(headA==NULL && headB!=NULL) return 0;
+        else if(headA!=NULL && headB==NULL) return 0;
+        else if(headA->data==headB->data) flag=1;
+        else return 0;
+        headA=headA->next;
+        headB=headB->next;
+    }
+    return flag;
+  // This is a "method-only" submission. 
+  // You only need to complete this method 
+}
