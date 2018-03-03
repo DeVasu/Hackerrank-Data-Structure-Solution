@@ -1,0 +1,18 @@
+int getsize(Node *head)
+{
+    if(head==NULL) return 0;
+    else return 1+getsize(head->next);
+
+}
+int GetNode(Node *head,int positionFromTail)
+{
+    int s=getsize(head);
+    int n=s-positionFromTail;
+    while(--n)
+    {
+        head=head->next;
+    }
+    return head->data;
+  // This is a "method-only" submission. 
+  // You only need to complete this method. 
+}
